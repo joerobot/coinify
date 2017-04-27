@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,100');
+
+$coinifyRed: #FF7F51;
+$copper: #893618;
+$silver: #BDBDBD;
+$gold: #D0AF63;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Assistant', 'Helvetica', sans-serif;
+    font-weight: 300;
+    color: #222;
+}
+
+.coinify__container {
+    margin: 0 auto;
+    max-width: 760px;
+
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 100;
+        font-size: 48px;
+        letter-spacing: 1px;
+
+        span {
+            color: #fff;
+            padding: 0 16px;
+            border-radius: 16px 0 16px;
+            background-color: $coinifyRed;
+        }
+    }
+
+    h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    p {
+        background-color: rgba(230, 230, 230, 0.5);
+        padding: 6px 12px;
+        border-radius: 6px;
+        margin: 36px auto;
+        max-width: 520px;
+    }
+
+    .coinify__input {
+        max-width: 640px;
+        margin: 0 auto;
+
+        .coinify__input__form {
+            display: block;
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid #d6d6d6;
+            line-height: 48px;
+            background-color: #fbfbfb;
+            padding: 8px 32px;
+            font-size: 36px;
+            font-weight: 300;
+            text-align: center;
+            transition: border-color 0.2s ease-in-out;
+
+            &:focus {
+                border-color: lighten($coinifyRed, 20%);
+                outline: 0;
+            }
+        }
+
+        .coinify__input__button {
+            margin: 24px auto 0;
+            width: 240px;
+            display: block;
+            border: 0;
+            background-color: #d6d6d6;
+            font-size: 24px;
+            font-weight: 300;
+            color: #fff;
+            padding: 8px 36px;
+            pointer-events: none;
+            transition: background-color 0.2s ease-in-out;
+        }
+    }
+
+    form {
+        &.valid {
+            .coinify__input__form,
+            .coinify__input__form:focus {
+                border-color: green;
+            }
+
+            .coinify__input__button {
+                background-color: $coinifyRed;
+                pointer-events: auto;
+                cursor: pointer;
+            }
+        }
+
+        &.invalid {
+            .coinify__input__form,
+            .coinify__input__form:focus {
+                border-color: red;
+            }
+
+            .coinify__input__button {
+                background-color: #d6d6d6;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .coinify__output {
+        margin: 48px auto 0;
+        width: 100%;
+        font-size: 36px;
+        line-height: 36px;
+
+        .output__row {
+            display: flex;
+            padding: 12px;
+            width: 100%;
+
+            span {
+                display: inline-block;
+                width: (100% / 6);
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .output__multiply {
+                svg {
+                    width: 18px;
+                }
+            }
+
+            .output__equals {
+                svg {
+                    width: 36px;
+                }
+            }
+
+            .output__coin {
+                .coin {
+                    border-radius: 50px;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .output__coin--200 {
+                    height: 40px;
+                    width: 40px;
+                    background-image: radial-gradient(circle, $silver 16px, $gold 0);
+                }
+
+                .output__coin--100 {
+                    background-color: $gold;
+                    height: 32px;
+                    width: 32px;
+                }
+
+                .output__coin--50 {
+                    height: 36px;
+                    width: 36px;
+                    background-color: $silver;
+                }
+
+                .output__coin--20 {
+                    background-color: $silver;
+                    height: 28px;
+                    width: 28px;
+                }
+
+                .output__coin--10 {
+                    height: 36px;
+                    width: 36px;
+                    background-color: $silver;
+                }
+
+                .output__coin--5 {
+                    background-color: $silver;
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .output__coin--2 {
+                    height: 36px;
+                    width: 36px;
+                    background-color: $copper;
+                }
+
+                .output__coin--1 {
+                    height: 24px;
+                    width: 24px;
+                    background-color: $copper;
+                }
+            }
+
+            .output__number {
+            }
+        }
+    }
+}
