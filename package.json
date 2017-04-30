@@ -1,5 +1,5 @@
 {
-  "name": "coins",
+  "name": "coinify",
   "version": "1.0.0",
   "description": "An app to calculate the coins you need.",
   "main": "app.js",
@@ -28,5 +28,14 @@
     "gulp-usemin": "^0.3.23",
     "gulp-useref": "^3.1.0",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joerobot/coinify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joerobot/coinify/issues"
+  },
+  "homepage": "https://github.com/joerobot/coinify#readme"
 }
